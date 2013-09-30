@@ -1,10 +1,11 @@
 textgui
 =======
 
-Text GUI module for Go, uses ncurses
+Text GUI module for Go. Uses ncurses and the termbox-go module.
 
-MIT license
-Alexander Rødseth 2013
+* License: MIT
+* Author: Alexander Rødseth <rodseth@gmail.com>
+
 
 Simple example
 --------------
