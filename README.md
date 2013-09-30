@@ -1,4 +1,4 @@
-textgui
+TextGUI
 =======
 
 Text GUI module for Go. Uses ncurses and the termbox-go module.
@@ -26,3 +26,8 @@ func main() {
 	textgui.Close()
 }
 ```
+
+Online API documentation
+------------------------
+
+[go.pkgdoc.org](http://go.pkgdoc.org/github.com/xyproto/textgui)
