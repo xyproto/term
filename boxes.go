@@ -92,11 +92,23 @@ func (r *Box) nicePlacement(container *Box) {
 	}
 }
 
-func (r *Box) place(container *Box) {
-	r.frame.x = container.inner.x
-	r.frame.y = container.inner.y
+func (b *Box) place(container *Box) {
+	b.frame.x = container.inner.x
+	b.frame.y = container.inner.y
 }
 
-func (r *Box) getInnerBox() *Rect {
-	return r.inner
+func (b *Box) GetInner() *Rect {
+	return b.inner
+}
+
+func (b *Box) GetFrame() *Rect {
+	return b.frame
+}
+
+func (b *Box) SetInner(r *Rect) {
+	b.inner = r
+}
+
+func (b *Box) SetFrame(r *Rect) {
+	b.frame = r
 }

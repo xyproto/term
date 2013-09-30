@@ -3,11 +3,11 @@ package textgui
 // Dialog wrapper
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 	"os/exec"
 	"strconv"
-	"bytes"
 )
 
 const (
