@@ -61,3 +61,12 @@ func DrawAsciiArt(x, y int, text string) int {
 	}
 	return y + counter
 }
+
+func DrawRaw(x, y int, text string) int {
+	counter := 0
+	for i, line := range pystring.New(text).SplitLines() {
+		Write(x, y+i, line, TEXTCOLOR, BG)
+		counter++
+	}
+	return y + counter
+}
