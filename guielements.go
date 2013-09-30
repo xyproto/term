@@ -9,10 +9,10 @@ func DrawBackground() {
 }
 
 func DrawBox(r *Box, extrude bool) *Rect {
-	x := r.frame.x
-	y := r.frame.y
-	width := r.frame.w
-	height := r.frame.h
+	x := r.frame.X
+	y := r.frame.Y
+	width := r.frame.W
+	height := r.frame.H
 	FG1 := BOXLIGHT
 	FG2 := BOXDARK
 	if !extrude {
@@ -39,7 +39,7 @@ func DrawList(r *Box, items []string, selected int) {
 		if i == selected {
 			color = LISTFOCUS
 		}
-		Write(r.frame.x, r.frame.y+i, s, color, BOXBG)
+		Write(r.frame.X, r.frame.Y+i, s, color, BOXBG)
 	}
 }
 

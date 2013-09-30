@@ -1,7 +1,7 @@
 package textgui
 
 /*
- * Functions and types for drawing ASCII frames and dealing with boxes
+ * Functions and types for drawing ASCII frames and dealing wi.H boxes
  * and rectangles.
  *
  */
@@ -18,10 +18,10 @@ const (
 )
 
 type Rect struct {
-	x int
-	y int
-	w int
-	h int
+	X int
+	Y int
+	W int
+	H int
 }
 
 type Box struct {
@@ -34,67 +34,67 @@ func NewBox() *Box {
 }
 
 func (r *Box) center(container *Box) {
-	widthleftover := container.inner.w - r.frame.w
-	heightleftover := container.inner.h - r.frame.h
-	r.frame.x = container.inner.x + widthleftover/2
-	r.frame.y = container.inner.y + heightleftover/2
+	widthleftover := container.inner.W - r.frame.W
+	heightleftover := container.inner.H - r.frame.H
+	r.frame.X = container.inner.X + widthleftover/2
+	r.frame.Y = container.inner.Y + heightleftover/2
 }
 
 func (r *Box) fill(container *Box) {
-	r.frame.x = container.inner.x
-	r.frame.y = container.inner.y
-	r.frame.w = container.inner.w
-	r.frame.h = container.inner.h
+	r.frame.X = container.inner.X
+	r.frame.Y = container.inner.Y
+	r.frame.W = container.inner.W
+	r.frame.H = container.inner.H
 }
 
 func (r *Box) fillWithMargins(container *Box, margins int) {
 	r.fill(container)
-	r.frame.x += margins
-	r.frame.y += margins
-	r.frame.w -= margins * 2
-	r.frame.h -= margins * 2
+	r.frame.X += margins
+	r.frame.Y += margins
+	r.frame.W -= margins * 2
+	r.frame.H -= margins * 2
 }
 
 func (r *Box) fillWithPercentageMargins(container *Box, horizmarginp float32, vertmarginp float32) {
-	horizmargin := int(float32(container.inner.w) * horizmarginp)
-	vertmargin := int(float32(container.inner.h) * vertmarginp)
+	horizmargin := int(float32(container.inner.W) * horizmarginp)
+	vertmargin := int(float32(container.inner.H) * vertmarginp)
 	r.fill(container)
-	r.frame.x += horizmargin
-	r.frame.y += vertmargin
-	r.frame.w -= horizmargin * 2
-	r.frame.h -= vertmargin * 2
+	r.frame.X += horizmargin
+	r.frame.Y += vertmargin
+	r.frame.W -= horizmargin * 2
+	r.frame.H -= vertmargin * 2
 }
 
 func (r *Box) getContentPos() (int, int) {
-	return r.inner.x, r.inner.y
+	return r.inner.X, r.inner.Y
 }
 
 func (r *Box) thirdSize(container *Box) {
-	r.frame.w = container.inner.w / 3
-	r.frame.h = container.inner.h / 3
+	r.frame.W = container.inner.W / 3
+	r.frame.H = container.inner.H / 3
 }
 
 func (r *Box) thirdPlace(container *Box) {
-	r.frame.x = container.inner.x + container.inner.w/3
-	r.frame.y = container.inner.y + container.inner.h/3
+	r.frame.X = container.inner.X + container.inner.W/3
+	r.frame.Y = container.inner.Y + container.inner.H/3
 }
 
 func (r *Box) nicePlacement(container *Box) {
-	r.frame.x = container.inner.x
-	r.frame.y = container.inner.y
-	leftoverwidth := container.inner.w - r.frame.w
-	leftoverheight := container.inner.h - r.frame.h
-	if leftoverwidth > r.frame.w {
-		r.frame.x += leftoverwidth / 3
+	r.frame.X = container.inner.X
+	r.frame.Y = container.inner.Y
+	leftoverwidth := container.inner.W - r.frame.W
+	leftoverheight := container.inner.H - r.frame.H
+	if leftoverwidth > r.frame.W {
+		r.frame.X += leftoverwidth / 3
 	}
-	if leftoverheight > r.frame.h {
-		r.frame.y += leftoverheight / 3
+	if leftoverheight > r.frame.H {
+		r.frame.Y += leftoverheight / 3
 	}
 }
 
 func (b *Box) place(container *Box) {
-	b.frame.x = container.inner.x
-	b.frame.y = container.inner.y
+	b.frame.X = container.inner.X
+	b.frame.Y = container.inner.Y
 }
 
 func (b *Box) GetInner() *Rect {
