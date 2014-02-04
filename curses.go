@@ -67,16 +67,14 @@ func PollEvent() *termbox.Event {
 	return &e
 }
 
-// Wait for Esc or Enter to be pressed
+// Wait for Esc, Enter or Space to be pressed
 func WaitForKey() {
 	for {
 		e := PollEvent()
 		switch e.Type {
 		case termbox.EventKey:
 			switch e.Key {
-			case termbox.KeyEsc:
-				return
-			case termbox.KeyEnter:
+			case termbox.KeyEsc, termbox.KeyEnter, termbox.KeySpace:
 				return
 			}
 		}
