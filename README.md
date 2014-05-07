@@ -7,8 +7,8 @@ Text GUI module for Go. Uses ncurses and the termbox-go module.
 * Author: Alexander Rødseth <rodseth@gmail.com>
 
 
-Simple example
---------------
+A simple example
+----------------
 
 ```go
 package main
@@ -27,8 +27,8 @@ func main() {
 }
 ```
 
-Another example
----------------
+Another simple example
+----------------------
 
 ```go
 package main
