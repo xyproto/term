@@ -30,4 +30,4 @@ func main() {
 Online API documentation
 ------------------------
 
-[go.pkgdoc.org](http://go.pkgdoc.org/github.com/xyproto/textgui)
+[textgui API documentation at godoc.org](http://godoc.org/github.com/xyproto/textgui)
