@@ -106,3 +106,7 @@ func (o *TextOutput) DarkPurple(s string) string {
 func (o *TextOutput) DarkGray(s string) string {
 	return o.colorOn(1, 30) + s + o.colorOff()
 }
+
+func (o *TextOutput) White(s string) string {
+	return o.colorOn(1, 37) + s + o.colorOff()
+}
