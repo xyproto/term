@@ -1,16 +1,26 @@
 TextGUI
 =======
 
-Text GUI module for Go. Uses ncurses and the termbox-go module.
+[![Build Status](https://travis-ci.org/xyproto/textgui.svg?branch=master)](https://travis-ci.org/xyproto/textgui)
 
-* License: MIT
-* Author: Alexander Rødseth <rodseth@gmail.com>
+Text User Interface module for Go. ("Text/Graphical User Interface")
+
+Online API documentation
+------------------------
+
+[textgui API documentation at godoc.org](http://godoc.org/github.com/xyproto/textgui)
 
 
-A simple example
-----------------
+Features and limitations
+------------------------
 
-```go
+* Uses ncurses and the termbox-go module.
+
+
+Simple example
+--------------
+
+~~~ go
 package main
 
 import (
@@ -25,12 +35,12 @@ func main() {
 	WaitForKey()
 	Close()
 }
-```
+~~~
 
-Another simple example
-----------------------
+Another example
+---------------
 
-```go
+~~~ go
 package main
 
 import (
@@ -64,9 +74,12 @@ func main() {
 	fmt.Println("Ready.")
 	taunt()
 }
-```
+~~~
 
-Online API documentation
-------------------------
+Author and licence
+-------------------
 
-[textgui API documentation at godoc.org](http://godoc.org/github.com/xyproto/textgui)
+* License: MIT
+* Author: Alexander Rødseth <rodseth@gmail.com>
+
+
