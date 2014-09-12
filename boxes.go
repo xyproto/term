@@ -1,7 +1,7 @@
 package textgui
 
 /*
- * Functions and types for drawing ASCII frames and dealing wi.H boxes
+ * Functions and types for drawing text frames and dealing with boxes
  * and rectangles.
  *
  */

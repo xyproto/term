@@ -1,8 +1,6 @@
 package textgui
 
-import (
-	"github.com/xyproto/pystring"
-)
+import . "github.com/xyproto/pystring"
 
 func DrawBackground() {
 	Clear()
@@ -20,15 +18,15 @@ func DrawBox(r *Box, extrude bool) *Rect {
 		FG2 = BOXLIGHT
 	}
 	Write(x, y, TLCHAR, FG1, BOXBG)
-	Write(x+1, y, pystring.New(HCHAR).Multiply(width-2), FG1, BOXBG)
+	Write(x+1, y, Repeat(HCHAR, width-2), FG1, BOXBG)
 	Write(x+width-1, y, TRCHAR, FG1, BOXBG)
 	for i := y + 1; i < y+height; i++ {
 		Write(x, i, VCHAR, FG1, BOXBG)
-		Write(x+1, i, pystring.New(" ").Multiply(width-2), FG1, BOXBG)
+		Write(x+1, i, Repeat(" ", width-2), FG1, BOXBG)
 		Write(x+width-1, i, VCHAR2, FG2, BOXBG)
 	}
 	Write(x, y+height-1, BLCHAR, FG1, BOXBG)
-	Write(x+1, y+height-1, pystring.New(HCHAR2).Multiply(width-2), FG2, BOXBG)
+	Write(x+1, y+height-1, Repeat(HCHAR2, width-2), FG2, BOXBG)
 	Write(x+width-1, y+height-1, BRCHAR, FG2, BOXBG)
 	return &Rect{x, y, width, height}
 }
@@ -55,7 +53,7 @@ func DrawButton(x, y int, text string, active bool) {
 
 func DrawAsciiArt(x, y int, text string) int {
 	counter := 0
-	for i, line := range pystring.New(text).SplitLines() {
+	for i, line := range Splitlines(text) {
 		Write(x, y+i, line, TEXTCOLOR, BOXBG)
 		counter++
 	}
@@ -64,7 +62,7 @@ func DrawAsciiArt(x, y int, text string) int {
 
 func DrawRaw(x, y int, text string) int {
 	counter := 0
-	for i, line := range pystring.New(text).SplitLines() {
+	for i, line := range Splitlines(text) {
 		Write(x, y+i, line, TEXTCOLOR, BG)
 		counter++
 	}

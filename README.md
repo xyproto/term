@@ -82,4 +82,3 @@ Author and licence
 * License: MIT
 * Author: Alexander Rødseth <rodseth@gmail.com>
 
-

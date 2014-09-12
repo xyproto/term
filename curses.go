@@ -10,16 +10,16 @@ import (
 )
 
 var (
-	BG          = termbox.ColorBlue
-	TITLECOLOR  = termbox.ColorCyan | termbox.AttrBold
-	TEXTCOLOR   = termbox.ColorBlack
-	BOXBG       = termbox.ColorWhite
-	BOXLIGHT    = termbox.ColorWhite | termbox.AttrBold
-	BOXDARK     = termbox.ColorBlack
-	BUTTONFOCUS = termbox.ColorYellow | termbox.AttrBold
-	BUTTONTEXT  = termbox.ColorWhite | termbox.AttrBold
-	LISTFOCUS   = termbox.ColorRed
-	LISTTEXT    = termbox.ColorBlack
+	BG          = Blue
+	TITLECOLOR  = Cyan | Bold
+	TEXTCOLOR   = Black
+	BOXBG       = White
+	BOXLIGHT    = White | Bold
+	BOXDARK     = Black
+	BUTTONFOCUS = Yellow | Bold
+	BUTTONTEXT  = White | Bold
+	LISTFOCUS   = Red
+	LISTTEXT    = Black
 )
 
 func Write(x int, y int, text string, fg termbox.Attribute, bg termbox.Attribute) {
