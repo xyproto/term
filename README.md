@@ -45,34 +45,36 @@ package main
 
 import (
 	"fmt"
-	. "github.com/xyproto/textgui"
+
+	"github.com/xyproto/textgui"
 )
 
 // Loop and echo the input until "exit" is typed
-func taunt() {
+func Taunt() {
 	for {
-		// The Ask function can be used instead of the two following lines
-		fmt.Print("> ")
-		line := ReadLn()
+		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
+		line := textgui.Ask("> ")
 
-		// Check if the user wants to quit
-		if line == "exit" {
+		// Check if the user has had enough
+		if line == "quit" {
 			break
 		}
 
 		// Taunt endlessly
-		fmt.Println("You are " + line + "!")
+		fmt.Println("No, you are " + line + "!")
 	}
 }
 
 func main() {
-	fmt.Println()
-	fmt.Println("Welcome to Taunt v.1.0")
-	fmt.Println()
-	fmt.Println("Type exit when done.")
-	fmt.Println()
-	fmt.Println("Ready.")
-	taunt()
+	fmt.Println(`
+Welcome to Taunt 1.0!
+	
+Type "quit" when done.
+	
+Ready.
+
+`)
+	Taunt()
 }
 ~~~
 
@@ -80,5 +82,5 @@ Author and licence
 -------------------
 
 * License: MIT
-* Author: Alexander Rødseth <rodseth@gmail.com>
+* Author: Alexander Rødseth
 
