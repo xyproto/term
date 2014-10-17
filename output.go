@@ -8,6 +8,8 @@ package textgui
  *
  */
 
+// TODO: Consider using https://github.com/fatih/color instead
+
 import (
 	"fmt"
 	"os"
