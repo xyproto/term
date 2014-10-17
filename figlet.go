@@ -1,21 +1,11 @@
 package textgui
 
-// Figlet wrapper
-
 import (
-	"os/exec"
+	"github.com/getwe/figlet4go"
 )
 
-const (
-	figletcmd = "/usr/bin/figlet"
-)
-
-// Uses figlet to generate ascii art text
+// Using the figlet4go library
 func Figlet(msg string) (string, error) {
-	cmd := exec.Command(figletcmd, msg)
-	b, err := cmd.Output()
-	if err != nil {
-		return msg, err
-	}
-	return string(b), nil
+	ascii_render := figlet4go.NewAsciiRender()
+	return ascii_render.Render(msg)
 }
