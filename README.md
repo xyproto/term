@@ -3,9 +3,9 @@ TextGUI
 
 [![Build Status](https://travis-ci.org/xyproto/textgui.svg?branch=master)](https://travis-ci.org/xyproto/textgui)
 
-Text User Interface package for Go.
+Text User "Graphical" Interface package for Go.
 
-Yes, the name is slightly silly. Can text can be graphics too?
+*Can text can be graphics too?*
 
 Online API documentation
 ------------------------
