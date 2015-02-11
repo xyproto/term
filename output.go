@@ -1,3 +1,4 @@
+// Text user interface package for Go. Uses ncurses.
 package textgui
 
 /*
