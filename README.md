@@ -3,7 +3,8 @@ TextGUI
 
 [![Build Status](https://travis-ci.org/xyproto/textgui.svg?branch=master)](https://travis-ci.org/xyproto/textgui)
 
-Text User Interface module for Go. ("Text/Graphical User Interface")
+Text User Interface module for Go.
+(and text can be graphics too?)
 
 Online API documentation
 ------------------------
