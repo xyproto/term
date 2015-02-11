@@ -52,19 +52,17 @@ func DrawButton(x, y int, text string, active bool) {
 }
 
 func DrawAsciiArt(x, y int, text string) int {
-	counter := 0
+	var i int
 	for i, line := range Splitlines(text) {
 		Write(x, y+i, line, TEXTCOLOR, BOXBG)
-		counter++
 	}
-	return y + counter
+	return y + i
 }
 
 func DrawRaw(x, y int, text string) int {
-	counter := 0
+	var i int
 	for i, line := range Splitlines(text) {
 		Write(x, y+i, line, TEXTCOLOR, BG)
-		counter++
 	}
-	return y + counter
+	return y + i
 }
