@@ -21,7 +21,7 @@ Features and limitations
 Simple example
 --------------
 
-~~~ go
+~~~go
 package main
 
 import (
@@ -41,7 +41,7 @@ func main() {
 Another example
 ---------------
 
-~~~ go
+~~~go
 package main
 
 import (
@@ -69,9 +69,9 @@ func Taunt() {
 func main() {
 	fmt.Println(`
 Welcome to Taunt 1.0!
-	
+
 Type "quit" when done.
-	
+
 Ready.
 
 `)
