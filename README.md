@@ -4,7 +4,8 @@ TextGUI
 [![Build Status](https://travis-ci.org/xyproto/textgui.svg?branch=master)](https://travis-ci.org/xyproto/textgui)
 
 Text User Interface module for Go.
-(and text can be graphics too?)
+
+Yes, the name is slightly silly. Can text can be graphics too?
 
 Online API documentation
 ------------------------
@@ -16,7 +17,8 @@ Features and limitations
 ------------------------
 
 * Uses ncurses and the termbox-go module.
-
+* Requires `/usr/bin/dialog` to be available when using the dialog-related functions.
+* Provides an easy way to get started drawing colorful characters at any location in a terminal.
 
 Simple example
 --------------
@@ -50,7 +52,7 @@ import (
 	"github.com/xyproto/textgui"
 )
 
-// Loop and echo the input until "exit" is typed
+// Loop and echo the input until "quit" is typed
 func Taunt() {
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.

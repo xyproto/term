@@ -6,7 +6,7 @@ import (
 	"github.com/xyproto/textgui"
 )
 
-// Loop and echo the input until "exit" is typed
+// Loop and echo the input until "quit" is typed
 func Taunt() {
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
