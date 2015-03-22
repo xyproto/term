@@ -1,7 +1,5 @@
 package textgui
 
-import . "github.com/xyproto/pystring"
-
 func DrawBackground() {
 	Clear()
 }

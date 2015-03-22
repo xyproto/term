@@ -2,8 +2,10 @@ package textgui
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"os"
+	"strings"
 )
 
 /*
@@ -56,4 +58,55 @@ func AskYesNo(question string, noIsDefault bool) bool {
 	}
 	// Anything that isn't no is "yes" (true)
 	return !(s == "N" || s == "n")
+}
+
+// Map a function on each element of a slice of strings
+func MapS(f func(string) string, sl []string) (result []string) {
+	result = make([]string, len(sl), len(sl))
+	for i, _ := range sl {
+		result[i] = f(sl[i])
+	}
+	return result
+}
+
+// Filter out all strings where the function does not return true
+func FilterS(f func(string) bool, sl []string) (result []string) {
+	result = make([]string, 0, 0)
+	for i, _ := range sl {
+		if f(sl[i]) {
+			result = append(result, sl[i])
+		}
+	}
+	return result
+}
+
+// Split a string on any newline: \n, \r or \r\n
+func Splitlines(s string) []string {
+	s = strings.Replace(s, "\r", "\n", -1)
+	s = strings.Replace(s, "\r\n", "\n", -1)
+	return MapS(trimnewlines, FilterS(nonempty, strings.Split(s, "\n")))
+}
+
+// Helper function for checking if a string is empty or not
+func nonempty(s string) bool {
+	return trimnewlines(s) != ""
+}
+
+// Helper function for checking if a string is empty or not
+func noblanklines(s string) bool {
+	return strings.TrimSpace(s) != ""
+}
+
+// Helper function for trimming away newlines:
+func trimnewlines(s string) string {
+	return strings.Trim(s, "\r\n")
+}
+
+// Repeat a string n number of times
+func Repeat(text string, n int) string {
+	var buf bytes.Buffer
+	for i := 0; i < n; i++ {
+		buf.WriteString(text)
+	}
+	return buf.String()
 }

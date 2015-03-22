@@ -3,9 +3,7 @@ TextGUI
 
 [![Build Status](https://travis-ci.org/xyproto/textgui.svg?branch=master)](https://travis-ci.org/xyproto/textgui)
 
-Text User "Graphical" Interface package for Go.
-
-*Can text can be graphics too?*
+The name is a bit "tongue in cheek, since it isn't really a "graphical" user interface, but wants to be one.
 
 Online API documentation
 ------------------------
@@ -81,9 +79,9 @@ Ready.
 }
 ~~~
 
-Author and licence
+General information
 -------------------
 
 * License: MIT
-* Author: Alexander Rødseth
+* Author: Alexander F Rødseth <rodseth@gmail.com>
 
