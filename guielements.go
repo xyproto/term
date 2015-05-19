@@ -1,4 +1,4 @@
-package textgui
+package term
 
 func DrawBackground() {
 	Clear()

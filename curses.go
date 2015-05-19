@@ -1,4 +1,4 @@
-package textgui
+package term
 
 /*
  * Various functions for using curses/termbox

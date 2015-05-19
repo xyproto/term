@@ -1,4 +1,4 @@
-package textgui
+package term
 
 /*
  * Functions and types for drawing text frames and dealing with boxes

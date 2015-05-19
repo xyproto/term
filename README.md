@@ -1,14 +1,14 @@
 TextGUI
 =======
 
-[![Build Status](https://travis-ci.org/xyproto/textgui.svg?branch=master)](https://travis-ci.org/xyproto/textgui)
+[![Build Status](https://travis-ci.org/xyproto/term.svg?branch=master)](https://travis-ci.org/xyproto/term)
 
 The name is a bit "tongue in cheek, since it isn't really a "graphical" user interface, but wants to be one.
 
 Online API documentation
 ------------------------
 
-[textgui API documentation at godoc.org](http://godoc.org/github.com/xyproto/textgui)
+[term API documentation at godoc.org](http://godoc.org/github.com/xyproto/term)
 
 
 Features and limitations
@@ -25,7 +25,7 @@ Simple example
 package main
 
 import (
-	. "github.com/xyproto/textgui"
+	. "github.com/xyproto/term"
 )
 
 func main() {
@@ -47,14 +47,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/xyproto/textgui"
+	"github.com/xyproto/term"
 )
 
 // Loop and echo the input until "quit" is typed
 func Taunt() {
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
-		line := textgui.Ask("> ")
+		line := term.Ask("> ")
 
 		// Check if the user has had enough
 		if line == "quit" {

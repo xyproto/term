@@ -3,14 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/xyproto/textgui"
+	"github.com/xyproto/term"
 )
 
 // Loop and echo the input until "quit" is typed
 func Taunt() {
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
-		line := textgui.Ask("> ")
+		line := term.Ask("> ")
 
 		// Check if the user has had enough
 		if line == "quit" {
