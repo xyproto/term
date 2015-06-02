@@ -1,4 +1,4 @@
-// Text user interface package for Go. Uses ncurses.
+// Package term offers a simple way to use ncurses and output colored text.
 package term
 
 /*
