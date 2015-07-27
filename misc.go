@@ -8,11 +8,7 @@ import (
 	"strings"
 )
 
-/*
- * Various helper functions
- *
- */
-
+// Represents a function that takes no arguments and returns two integers
 type ReturnsTwoInts func() (int, int)
 
 // Get the first value from the function that returns two ints
@@ -63,7 +59,7 @@ func AskYesNo(question string, noIsDefault bool) bool {
 // Map a function on each element of a slice of strings
 func MapS(f func(string) string, sl []string) (result []string) {
 	result = make([]string, len(sl), len(sl))
-	for i, _ := range sl {
+	for i := range sl {
 		result[i] = f(sl[i])
 	}
 	return result
@@ -72,7 +68,7 @@ func MapS(f func(string) string, sl []string) (result []string) {
 // Filter out all strings where the function does not return true
 func FilterS(f func(string) bool, sl []string) (result []string) {
 	result = make([]string, 0, 0)
-	for i, _ := range sl {
+	for i := range sl {
 		if f(sl[i]) {
 			result = append(result, sl[i])
 		}

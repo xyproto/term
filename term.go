@@ -1,13 +1,5 @@
-// Package term offers a simple way to use ncurses and output colored text.
+// Package term offers a simple way to use ncurses and output colored text
 package term
-
-/*
- *
- * Colored text output
- *
- * Only supports a few selected colors
- *
- */
 
 // TODO: Consider using https://github.com/fatih/color instead
 
@@ -15,6 +7,8 @@ import (
 	"fmt"
 	"os"
 )
+
+const versionString = "term 0.1"
 
 type TextOutput struct {
 	color   bool

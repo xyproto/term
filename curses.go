@@ -1,14 +1,10 @@
 package term
 
-/*
- * Various functions for using curses/termbox
- *
- */
-
 import (
 	"github.com/nsf/termbox-go"
 )
 
+// Default color/attribute settings
 var (
 	BG          = Blue
 	TITLECOLOR  = Cyan | Bold
@@ -22,46 +18,53 @@ var (
 	LISTTEXT    = Black
 )
 
+// Place text at the given x and y coordinate.
+// fg is the foreground color, while bg is the background color.
 func Write(x int, y int, text string, fg termbox.Attribute, bg termbox.Attribute) {
-	pos := 0
-	for _, r := range text {
+	for pos, r := range text {
 		termbox.SetCell(x+pos, y, r, fg, bg)
-		pos++
 	}
 }
 
+// Place text at the given x and y coordinate,
+// using the default color scheme.
 func Say(x int, y int, text string) {
-	pos := 0
-	for _, r := range text {
+	for pos, r := range text {
 		termbox.SetCell(x+pos, y, r, TEXTCOLOR, BG)
-		pos++
 	}
 }
 
+// Remove all text. Clear the screen.
 func Clear() {
 	termbox.Clear(TEXTCOLOR, BG)
 }
 
+// Retrieve the number of character columns available on the current screen
 func ScreenWidth() int {
 	return First(termbox.Size)
 }
 
+// Retrieve the number of lines of characters available on the current screen
 func ScreenHeight() int {
 	return Second(termbox.Size)
 }
 
+// Update the screen with what has been written so far
 func Flush() {
 	termbox.Flush()
 }
 
+// Initialize the text screen (using curses)
 func Init() error {
 	return termbox.Init()
 }
 
+// Close the text screen (using curses)
 func Close() {
 	termbox.Close()
 }
 
+// Retrieve the next event in the queue (like a keypress)
 func PollEvent() *termbox.Event {
 	e := termbox.PollEvent()
 	return &e
@@ -81,10 +84,12 @@ func WaitForKey() {
 	}
 }
 
+// Set the text/forground color
 func SetFg(fg termbox.Attribute) {
 	TEXTCOLOR = fg
 }
 
+// Set the background color
 func SetBg(bg termbox.Attribute) {
 	BG = bg
 }

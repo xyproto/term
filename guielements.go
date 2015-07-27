@@ -1,9 +1,13 @@
 package term
 
+// Draw the background color. Clear the screen.
 func DrawBackground() {
 	Clear()
 }
 
+// Draw a box using ASCII graphics.
+// The given Box struct defines the size and placement.
+// If extrude is True, the box looks a bit more like it's sticking out.
 func DrawBox(r *Box, extrude bool) *Rect {
 	x := r.frame.X
 	y := r.frame.Y
@@ -29,6 +33,9 @@ func DrawBox(r *Box, extrude bool) *Rect {
 	return &Rect{x, y, width, height}
 }
 
+// Draw a list widget. Takes a Box struct for the size and position.
+// Takes a list of strings to be listed and an int that represents
+// which item is currently selected. Does not scroll or wrap.
 func DrawList(r *Box, items []string, selected int) {
 	for i, s := range items {
 		color := LISTTEXT
@@ -39,6 +46,9 @@ func DrawList(r *Box, items []string, selected int) {
 	}
 }
 
+// Draws a button widget at the given placement,
+// with the given text. If active is False,
+// it will look more "grayed out".
 func DrawButton(x, y int, text string, active bool) {
 	color := BUTTONTEXT
 	if active {
@@ -49,6 +59,9 @@ func DrawButton(x, y int, text string, active bool) {
 	Write(x+3+len(text), y, "  >", color, BG)
 }
 
+// Outputs a multiline string at the given coordinates.
+// Uses the box background color.
+// Returns the final y coordinate after drawing.
 func DrawAsciiArt(x, y int, text string) int {
 	var i int
 	for i, line := range Splitlines(text) {
@@ -57,6 +70,9 @@ func DrawAsciiArt(x, y int, text string) int {
 	return y + i
 }
 
+// Outputs a multiline string at the given coordinates.
+// Uses the default background color.
+// Returns the final y coordinate after drawing.
 func DrawRaw(x, y int, text string) int {
 	var i int
 	for i, line := range Splitlines(text) {

@@ -12,9 +12,9 @@ Online API documentation
 Features and limitations
 ------------------------
 
-* Uses ncurses and the termbox-go module.
-* Requires `/usr/bin/dialog` to be available when using the dialog-related functions.
 * Provides an easy way to get started drawing colorful characters at any location in a terminal.
+* Uses ncurses and the termbox-go module.
+* The dialog functionality requires `/usr/bin/dialog` to be available. Use the `SetDialogPath` if it is placed elsewhere.
 
 Simple example
 --------------
@@ -82,4 +82,4 @@ General information
 
 * License: MIT
 * Author: Alexander F Rødseth <rodseth@gmail.com>
-
+* Version: 0.1
