@@ -7,29 +7,29 @@ import (
 )
 
 // Loop and echo the input until "quit" is typed
-func Taunt() {
+func Repeat() {
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
 		line := term.Ask("> ")
 
-		// Check if the user has had enough
+		// Check if the user wants to quit
 		if line == "quit" {
 			break
 		}
 
-		// Taunt endlessly
-		fmt.Println("No, you are " + line + "!")
+		// Repeat what was just said
+		fmt.Println("You said: " + line)
 	}
 }
 
 func main() {
 	fmt.Println(`
-Welcome to Taunt 1.0!
-	
+Welcome to Repeat 1.0!
+
 Type "quit" when done.
-	
+
 Ready.
 
 `)
-	Taunt()
+	Repeat()
 }

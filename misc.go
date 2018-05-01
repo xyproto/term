@@ -58,7 +58,7 @@ func AskYesNo(question string, noIsDefault bool) bool {
 
 // Map a function on each element of a slice of strings
 func MapS(f func(string) string, sl []string) (result []string) {
-	result = make([]string, len(sl), len(sl))
+	result = make([]string, len(sl))
 	for i := range sl {
 		result[i] = f(sl[i])
 	}
@@ -67,7 +67,7 @@ func MapS(f func(string) string, sl []string) (result []string) {
 
 // Filter out all strings where the function does not return true
 func FilterS(f func(string) bool, sl []string) (result []string) {
-	result = make([]string, 0, 0)
+	result = make([]string, 0)
 	for i := range sl {
 		if f(sl[i]) {
 			result = append(result, sl[i])
@@ -86,11 +86,6 @@ func Splitlines(s string) []string {
 // Helper function for checking if a string is empty or not
 func nonempty(s string) bool {
 	return trimnewlines(s) != ""
-}
-
-// Helper function for checking if a string is empty or not
-func noblanklines(s string) bool {
-	return strings.TrimSpace(s) != ""
 }
 
 // Helper function for trimming away newlines:

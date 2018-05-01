@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-const versionString = "term 0.1"
+const VersionString = "term 0.2"
 
 type TextOutput struct {
 	color   bool
@@ -64,44 +64,52 @@ func (o *TextOutput) DarkRed(s string) string {
 	return o.colorOn(0, 31) + s + o.colorOff()
 }
 
-func (o *TextOutput) LightGreen(s string) string {
-	return o.colorOn(1, 32) + s + o.colorOff()
-}
-
 func (o *TextOutput) DarkGreen(s string) string {
 	return o.colorOn(0, 32) + s + o.colorOff()
-}
-
-func (o *TextOutput) LightYellow(s string) string {
-	return o.colorOn(1, 33) + s + o.colorOff()
 }
 
 func (o *TextOutput) DarkYellow(s string) string {
 	return o.colorOn(0, 33) + s + o.colorOff()
 }
 
-func (o *TextOutput) LightBlue(s string) string {
-	return o.colorOn(1, 34) + s + o.colorOff()
-}
-
 func (o *TextOutput) DarkBlue(s string) string {
 	return o.colorOn(0, 34) + s + o.colorOff()
-}
-
-func (o *TextOutput) LightCyan(s string) string {
-	return o.colorOn(1, 36) + s + o.colorOff()
-}
-
-func (o *TextOutput) LightPurple(s string) string {
-	return o.colorOn(1, 35) + s + o.colorOff()
 }
 
 func (o *TextOutput) DarkPurple(s string) string {
 	return o.colorOn(0, 35) + s + o.colorOff()
 }
 
+func (o *TextOutput) DarkCyan(s string) string {
+	return o.colorOn(0, 36) + s + o.colorOff()
+}
+
 func (o *TextOutput) DarkGray(s string) string {
 	return o.colorOn(1, 30) + s + o.colorOff()
+}
+
+func (o *TextOutput) LightRed(s string) string {
+	return o.colorOn(0, 31) + s + o.colorOff()
+}
+
+func (o *TextOutput) LightGreen(s string) string {
+	return o.colorOn(1, 32) + s + o.colorOff()
+}
+
+func (o *TextOutput) LightYellow(s string) string {
+	return o.colorOn(1, 33) + s + o.colorOff()
+}
+
+func (o *TextOutput) LightBlue(s string) string {
+	return o.colorOn(1, 34) + s + o.colorOff()
+}
+
+func (o *TextOutput) LightPurple(s string) string {
+	return o.colorOn(1, 35) + s + o.colorOff()
+}
+
+func (o *TextOutput) LightCyan(s string) string {
+	return o.colorOn(1, 36) + s + o.colorOff()
 }
 
 func (o *TextOutput) White(s string) string {
