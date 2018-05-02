@@ -20,3 +20,8 @@ _cgo_export.*
 _testmain.go
 
 *.exe
+
+examples/colors/colors
+examples/dialog/dialog
+examples/repeat/repeat
+examples/simple/simple

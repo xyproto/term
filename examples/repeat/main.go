@@ -23,7 +23,7 @@ func Repeat() {
 }
 
 func main() {
-	fmt.Println(`
+	fmt.Print(`
 Welcome to Repeat 1.0!
 
 Type "quit" when done.
