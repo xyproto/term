@@ -12,7 +12,7 @@ Online API documentation
 Features and limitations
 ------------------------
 
-* Provides an easy way to get started drawing colorful characters at any location in a terminal.
+* Provides an easy way to get started drawing colorful characters at any position (X,Y) in a terminal.
 * Uses ncurses and the termbox-go module.
 
 Simple example
