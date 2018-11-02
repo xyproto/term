@@ -14,7 +14,6 @@ Features and limitations
 
 * Provides an easy way to get started drawing colorful characters at any location in a terminal.
 * Uses ncurses and the termbox-go module.
-* The dialog functionality requires `/usr/bin/dialog` to be available. Use the `SetDialogPath` if it is placed elsewhere.
 
 Simple example
 --------------
