@@ -1,6 +1,6 @@
 package term
 
-// These are used for drawing ASCII boxes
+// These are used for drawing "ASCII-art" boxes
 const (
 	TLCHAR = '┌' // top left
 	TRCHAR = '┐' // top right
