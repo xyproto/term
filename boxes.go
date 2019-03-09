@@ -2,10 +2,10 @@ package term
 
 // These are used for drawing "ASCII-art" boxes
 const (
-	TLCHAR = '┌' // top left
-	TRCHAR = '┐' // top right
-	BLCHAR = '└' // bottom left
-	BRCHAR = '┘' // bottom right
+	TLCHAR = '╭' // top left
+	TRCHAR = '╮' // top right
+	BLCHAR = '╰' // bottom left
+	BRCHAR = '╯' // bottom right
 	VCHAR  = '│' // vertical line, left side
 	VCHAR2 = '│' // vertical line, right side
 	HCHAR  = '─' // horizontal line
