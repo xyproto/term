@@ -26,6 +26,12 @@ func Write(x int, y int, text string, fg termbox.Attribute, bg termbox.Attribute
 	}
 }
 
+// Place a rune at the given x and y coordinate.
+// fg is the foreground color, while bg is the background color.
+func WriteRune(x int, y int, r rune, fg termbox.Attribute, bg termbox.Attribute) {
+	termbox.SetCell(x, y, r, fg, bg)
+}
+
 // Place text at the given x and y coordinate,
 // using the default color scheme.
 func Say(x int, y int, text string) {
