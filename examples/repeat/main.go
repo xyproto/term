@@ -8,13 +8,15 @@ import (
 
 // Loop and echo the input until "quit" is typed
 func Repeat() {
+OUT:
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
 		line := term.Ask("> ")
 
 		// Check if the user wants to quit
-		if line == "quit" {
-			break
+		switch line {
+		case "quit", "end", "exit", "q":
+			break OUT
 		}
 
 		// Repeat what was just said
