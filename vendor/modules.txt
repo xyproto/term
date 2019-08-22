@@ -1,14 +1,23 @@
 # github.com/gdamore/encoding v1.0.0
 github.com/gdamore/encoding
-# github.com/gdamore/tcell v1.1.1
+# github.com/gdamore/tcell v1.2.1-0.20190805162843-ae1dc54d2c70
 github.com/gdamore/tcell/termbox
 github.com/gdamore/tcell
 github.com/gdamore/tcell/terminfo
-# github.com/lucasb-eyer/go-colorful v0.0.0-20181028223441-12d3b2882a08
+github.com/gdamore/tcell/terminfo/base
+github.com/gdamore/tcell/terminfo/dynamic
+github.com/gdamore/tcell/terminfo/a/ansi
+github.com/gdamore/tcell/terminfo/v/vt100
+github.com/gdamore/tcell/terminfo/v/vt102
+github.com/gdamore/tcell/terminfo/v/vt220
+github.com/gdamore/tcell/terminfo/x/xterm
+# github.com/lucasb-eyer/go-colorful v1.0.2
 github.com/lucasb-eyer/go-colorful
 # github.com/mattn/go-runewidth v0.0.4
 github.com/mattn/go-runewidth
-# golang.org/x/text v0.3.0
+# golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+golang.org/x/sys/unix
+# golang.org/x/text v0.3.2
 golang.org/x/text/encoding
 golang.org/x/text/transform
 golang.org/x/text/encoding/internal/identifier
