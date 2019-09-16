@@ -6,7 +6,7 @@ Term
 Online API documentation
 ------------------------
 
-[term API documentation at godoc.org](http://godoc.org/github.com/xyproto/term)
+[API documentation at godoc](http://godoc.org/github.com/xyproto/term)
 
 Features and limitations
 ------------------------
