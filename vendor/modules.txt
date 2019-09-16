@@ -15,7 +15,7 @@ github.com/gdamore/tcell/terminfo/x/xterm
 github.com/lucasb-eyer/go-colorful
 # github.com/mattn/go-runewidth v0.0.4
 github.com/mattn/go-runewidth
-# golang.org/x/sys v0.0.0-20190911201528-7ad0cfa0b7b5
+# golang.org/x/sys v0.0.0-20190913121621-c3b328c6e5a7
 golang.org/x/sys/unix
 # golang.org/x/text v0.3.2
 golang.org/x/text/encoding
