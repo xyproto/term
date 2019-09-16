@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/xyproto/term"
+	"strings"
 )
 
 // Loop and echo the input until "quit" is typed
-func Repeat() {
-OUT:
+func main() {
+	fmt.Println(`Type "quit" when done.`)
 	for {
 		// Retrieve user input, with a prompt. Use ReadLn() for no prompt.
 		line := term.Ask("> ")
@@ -16,22 +16,13 @@ OUT:
 		// Check if the user wants to quit
 		switch line {
 		case "quit", "end", "exit", "q":
-			break OUT
+			return
 		}
 
 		// Repeat what was just said
-		fmt.Println("You said: " + line)
+		trimmed := strings.TrimSpace(line)
+		if trimmed != "" {
+			fmt.Println("I repeat: " + line)
+		}
 	}
-}
-
-func main() {
-	fmt.Print(`
-Welcome to Repeat 1.0!
-
-Type "quit" when done.
-
-Ready.
-
-`)
-	Repeat()
 }

@@ -21,7 +21,5 @@ _testmain.go
 
 *.exe
 
-examples/colors/colors
-examples/repeat/repeat
-examples/simple/simple
-examples/box/box
+cmd/repeat/repeat
+cmd/simple/simple
