@@ -11,6 +11,8 @@ Please consider using these Go packages instead, which should cover the same fun
 * [vt100](https://github.com/xyproto/vt100) for coloring text, reading keys or drawing terminal "graphics".
 * [textoutput](https://github.com/xyproto/textoutput) for coloring text, with tags like `<blue>`.
 * [readline](https://github.com/chzyer/readline) for a pure-Go implementation of similar functionality to the C `readline` library.
+* [ask](https://github.com/xyproto/ask) for asking users simple questions on the terminal.
+
 
 Online API documentation
 ------------------------
